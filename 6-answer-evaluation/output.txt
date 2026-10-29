@@ -1,0 +1,8 @@
+Name     Correct  Wrong  Unanswered  Score
+Anil     10       0      0           40
+Bhanu    8        1      1           31
+Chitra   4        6      0           10
+Deepak   INVALID - expected 10 answers but got 3
+Esha     5        4      1           16
+
+Topper: Anil with 40 marks
