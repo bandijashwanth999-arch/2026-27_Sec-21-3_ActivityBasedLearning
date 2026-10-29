@@ -1,0 +1,16 @@
+=== ELIGIBILITY CHECK ===
+Asha : ELIGIBLE
+Ravi : ELIGIBLE
+Meena : ELIGIBLE
+Kiran : REJECTED -> aggregate below 75
+Sita : REJECTED -> a subject mark below 50
+Arjun : REJECTED -> attendance below 75
+Divya : ELIGIBLE
+Rohit : REJECTED -> income above 300000
+
+=== FINAL RANK LIST ===
+Rank  Name    Aggr  Attend  Income   Status
+1     Meena   88    92      120000   AWARDED
+2     Asha    88    92      150000   AWARDED
+3     Divya   82    85      180000   AWARDED
+4     Ravi    82    85      200000   WAITING LIST
