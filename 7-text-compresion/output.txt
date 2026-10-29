@@ -1,0 +1,23 @@
+Original : 'aaabbbcccd' (length 10)
+Encoded  : a3b3c3d1 (length 8)
+Result   : Compression is useful, saved 2 characters
+
+Original : 'abcd' (length 4)
+Encoded  : a1b1c1d1 (length 8)
+Result   : Encoding NOT beneficial, keep the original text
+
+Original : 'aaaaaaaaaaaa' (length 12)
+Encoded  : a12 (length 3)
+Result   : Compression is useful, saved 9 characters
+
+Original : 'AAaa' (length 4)
+Encoded  : A2a2 (length 4)
+Result   : Encoding NOT beneficial, keep the original text
+
+Original : 'wwwwwbbbw' (length 9)
+Encoded  : w5b3w1 (length 6)
+Result   : Compression is useful, saved 3 characters
+
+Original : '' (length 0)
+Result   : Empty string - nothing to encode
+
