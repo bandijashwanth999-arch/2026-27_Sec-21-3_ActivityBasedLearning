@@ -1,0 +1,9 @@
+Month  Units  Energy   Surcharge  Rebate  Total    Change
+Jan    90     270.00   0.00       25      295.00   -
+Feb    120    390.00   0.00       0       440.00   49.2%  <-- UNUSUAL
+Mar    150    525.00   0.00       0       575.00   30.7%
+Apr    210    810.00   0.00       0       860.00   49.6%  <-- UNUSUAL
+May    340    1650.00  82.50      0       1782.50  107.3%  <-- UNUSUAL
+Jun    180    660.00   0.00       0       710.00   -60.2%
+
+Months with unusual increase: Feb, Apr, May
