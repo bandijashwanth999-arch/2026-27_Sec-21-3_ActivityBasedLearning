@@ -1,0 +1,24 @@
+Hello@2026 -> VALID
+
+short1! -> INVALID (2 problem(s))
+    - Too short: needs at least 8 characters
+    - Missing an uppercase letter
+
+alllowercase123 -> INVALID (3 problem(s))
+    - Missing an uppercase letter
+    - Missing a special character (!@#$%^&*)
+    - Same character repeated 3 times: 'l'
+
+MyPassword#9 -> INVALID (1 problem(s))
+    - Contains prohibited text: 'password'
+
+Aaa111!!!bC -> INVALID (1 problem(s))
+    - Same character repeated 3 times: '1'
+
+qwerty -> INVALID (5 problem(s))
+    - Too short: needs at least 8 characters
+    - Missing an uppercase letter
+    - Missing a digit
+    - Missing a special character (!@#$%^&*)
+    - Contains prohibited text: 'qwerty'
+
