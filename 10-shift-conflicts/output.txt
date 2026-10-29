@@ -1,0 +1,10 @@
+=== VALIDATION ===
+Invalid shift ignored: ('E103', 'Wed', 14, 10)
+Valid shifts: 8 of 9
+
+=== CONFLICTS ===
+E101 on Mon: 9-17 overlaps 16-22
+E102 on Tue: 10-15 overlaps 14-20
+
+Total conflicts: 2
+Employees with conflicts: E101, E102
