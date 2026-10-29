@@ -1,0 +1,17 @@
+Opening balance: 5000
+--------------------------------------------------
+1. D   2000  ACCEPTED - deposited                   Balance: 7000
+2. W   1000  ACCEPTED - withdrawn                   Balance: 6000
+3. W   6000  REJECTED - minimum balance rule        Balance: 6000
+4. W  15000  REJECTED - above withdrawal limit      Balance: 6000
+5. D   -500  REJECTED - amount must be positive     Balance: 6000
+6. T    100  REJECTED - unknown transaction type    Balance: 6000
+7. W   5500  ACCEPTED - withdrawn                   Balance: 500
+8. D   1500  ACCEPTED - deposited                   Balance: 2000
+--------------------------------------------------
+=== SUMMARY ===
+Accepted transactions : 4
+Rejected transactions : 4
+Total deposited       : 3500
+Total withdrawn       : 6500
+Closing balance       : 2000
