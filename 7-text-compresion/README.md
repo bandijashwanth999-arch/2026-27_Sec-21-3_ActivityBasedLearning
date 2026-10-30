@@ -21,5 +21,5 @@ Compress a string by replacing each group of consecutive repeated characters wit
 4. After the loop, append the last character and its count.
 5. Compare lengths and print the result.
 
-## 9. Conclusion
+## 5. Conclusion
 The program implements run-length encoding with a single loop and shows an important point: compression does not always make data smaller. Comparing lengths before accepting the encoded form is the correct design.
