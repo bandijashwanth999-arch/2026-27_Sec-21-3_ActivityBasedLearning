@@ -17,8 +17,10 @@ Generate a formatted monthly calendar from the month name, the number of days an
 1. For each (title, days, start) tuple, validate days (28 to 31) and start (0 to 6).
 2. Print the centred title and the header 'Mo Tu We Th Fr Sa Su'.
 3. Start the first line with 3 spaces for each empty cell before day 1.
-4. For day = 1 to days: add the day in a 3-character cell and increase the column.
-5. When the column reaches 7, print the line and start a new week.
-6. After the loop, print the last partial week if it is not empty.
+
+##5. Conclusion
+5. For day = 1 to days: add the day in a 3-character cell and increase the column.
+6. When the column reaches 7, print the line and start a new week.
+7. After the loop, print the last partial week if it is not empty.
 
 The program uses a column counter inside a loop to wrap days into weeks, and fixed-width strings to align the output. It validates its inputs, and the same code works for any valid month length and start day.
