@@ -1,76 +1,9 @@
-# Case Study 1: University Scholarship Allocation
-# Goal: check eligibility, rank eligible students, break ties by rules.
+name = input("Enter student name: ")
+marks = int(input("Enter aggregate marks: "))
+attendance = int(input("Enter attendance: "))
+income = int(input("Enter family income: "))
 
-# ---- Policy (change these values to test other policies) ----
-MIN_AGGREGATE = 75      # minimum aggregate marks (%)
-MIN_SUBJECT = 50        # minimum marks in every subject
-MIN_ATTENDANCE = 75     # minimum attendance (%)
-MAX_INCOME = 300000     # maximum yearly family income (Rs.)
-QUOTA = 3               # number of scholarships available
-
-# Each applicant is a tuple: (name, aggregate, lowest_subject_mark, attendance, income)
-applicants = [
-    ("Asha", 88, 62, 92, 150000),
-    ("Ravi", 82, 55, 85, 200000),
-    ("Meena", 88, 60, 92, 120000),
-    ("Kiran", 70, 60, 90, 100000),
-    ("Sita", 85, 45, 95, 180000),
-    ("Arjun", 79, 58, 70, 90000),
-    ("Divya", 82, 55, 85, 180000),
-    ("Rohit", 91, 70, 96, 350000),
-]
-
-eligible = []   # will hold only the students who pass every rule
-
-print("=== ELIGIBILITY CHECK ===")
-for student in applicants:
-    name, aggregate, lowest, attendance, income = student   # tuple unpacking
-    reasons = []                                            # reasons for rejection
-    if aggregate < MIN_AGGREGATE:
-        reasons.append("aggregate below " + str(MIN_AGGREGATE))
-    if lowest < MIN_SUBJECT:
-        reasons.append("a subject mark below " + str(MIN_SUBJECT))
-    if attendance < MIN_ATTENDANCE:
-        reasons.append("attendance below " + str(MIN_ATTENDANCE))
-    if income > MAX_INCOME:
-        reasons.append("income above " + str(MAX_INCOME))
-
-    if len(reasons) == 0:
-        eligible.append(student)
-        print(name, ": ELIGIBLE")
-    else:
-        print(name, ": REJECTED ->", ", ".join(reasons))
-
-# ---- Ranking using bubble sort ----
-# Rule 1: higher aggregate first
-# Rule 2 (tie): higher attendance first
-# Rule 3 (tie): lower income first
-n = len(eligible)
-for i in range(n - 1):
-    for j in range(n - 1 - i):
-        a = eligible[j]
-        b = eligible[j + 1]
-        b_is_better = False
-        if b[1] > a[1]:
-            b_is_better = True
-        elif b[1] == a[1]:
-            if b[3] > a[3]:
-                b_is_better = True
-            elif b[3] == a[3]:
-                if b[4] < a[4]:
-                    b_is_better = True
-        if b_is_better:
-            eligible[j], eligible[j + 1] = b, a             # swap
-print()
-print("=== FINAL RANK LIST ===")
-print("Rank  Name    Aggr  Attend  Income   Status")
-rank = 1
-for student in eligible:
-    name, aggregate, lowest, attendance, income = student
-    if rank <= QUOTA:
-        status = "AWARDED"
-    else:
-        status = "WAITING LIST"
-    print(str(rank).ljust(6) + name.ljust(8) + str(aggregate).ljust(6)
-          + str(attendance).ljust(8) + str(income).ljust(9) + status)
-    rank += 1
+if marks >= 75 and attendance >= 75 and income <= 200000:
+    print("Student is eligible for scholarship")
+else:
+    print("Student is not eligible")
